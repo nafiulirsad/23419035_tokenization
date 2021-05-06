@@ -6,6 +6,7 @@ function Bersihkan() {
     document.getElementById("kalimat").value = "";
     document.getElementById("kalimat_soal").innerHTML = "-";
     document.getElementById("hasil_tokenize").innerHTML = "";
+	document.getElementById("terdeteksi").innerHTML = "";
     document.getElementById("hasil").style.display = "none";
 }
 
@@ -21,6 +22,6 @@ function Tokenizkan() {
     for (i = 0; i < res_array.length; i++) {
         text += '"' + res_array[i] + '"';
       }
-
+	document.getElementById("terdeteksi").innerHTML = "Terdeteksi ada " + i + " kata";
     document.getElementById("hasil_tokenize").innerHTML = text.replace(/""/g, '", "');
 }
